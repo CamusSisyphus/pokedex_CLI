@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func commandMap(cfg *config) error {
+func commandMap(cfg *config, args ...string) error {
 	pokeapiClient := cfg.pokeapiClient
 	if cfg.PreviousLocationAreaUrl != nil && cfg.NextLocationAreaUrl == nil {
 		return fmt.Errorf("ON THE LAST PAGE")

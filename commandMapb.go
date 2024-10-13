@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func commandMapb(cfg *config) error {
+func commandMapb(cfg *config, args ...string) error {
 	pokeapiClient := cfg.pokeapiClient
 	if cfg.PreviousLocationAreaUrl == nil {
 		return fmt.Errorf("ON THE FIRST PAGE")
